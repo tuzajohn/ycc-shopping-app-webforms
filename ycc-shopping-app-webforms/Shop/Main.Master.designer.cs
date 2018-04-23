@@ -13,6 +13,15 @@ namespace ycc_shopping_app_webforms.Shop {
     public partial class Main {
         
         /// <summary>
+        /// CartItemCounterLiteral control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal CartItemCounterLiteral;
+        
+        /// <summary>
         /// Image1 control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,24 @@ namespace ycc_shopping_app_webforms.Shop {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image4;
+        
+        /// <summary>
+        /// BreadComb control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder BreadComb;
+        
+        /// <summary>
+        /// CatLiteral control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal CatLiteral;
         
         /// <summary>
         /// Image5 control.

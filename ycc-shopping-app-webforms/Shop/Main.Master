@@ -16,7 +16,7 @@
 </head>
 <body>
     <!--collapsing  nav bar-->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">Grocery Shop</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,34 +31,29 @@
                     <li class="nav-item ">
                         <a class="nav-link" href="#categories">Categories</a>
                     </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="shopnow.aspx">Cart</a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#categories">Signup</a>
-                    </li>
                 </ul>
 
-                <form class="form-inline my-2 my-lg-0" runat="server">
+                <form class="form-inline my-2 my-lg-0" action="../../Shop/Default.aspx"> 
                     <div class="input-group input-group-sm">
-                        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search..."/>
+                        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search..." name="q"/>
                         <div class="input-group-append">
-                            <button type="button" class="btn btn-secondary btn-number">
+                            <button type="submit" class="btn btn-secondary btn-number">
                                 <i class="fa fa-search"></i>
                             </button>
                         </div>
                     </div>
                     <a class="btn btn-success btn-sm ml-3" href="shopnow.aspx">
                         <i class="fa fa-shopping-cart"></i>Cart
-                                <span class="badge badge-light">0</span>
+                                <span class="badge badge-light"><asp:Literal runat="server" ID="CartItemCounterLiteral" /></span>
                     </a>
                     <a class="btn btn-success btn-sm ml-3" href="#">
-                        <i class=""></i>Buy Now
-                                
+                        <i class="fa fa-user"></i>Sign Up
+                    </a>
+                    <a class="btn btn-success btn-sm ml-3" href="#">
+                        <i class="fa fa-user"></i>Logout
                     </a>
                 </form>
             </div>
@@ -118,9 +113,7 @@
             <div class="col">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="Default.aspx">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#categories">Category</a></li>
-
+                        <asp:ContentPlaceHolder runat="server" ID="BreadComb" />
                     </ol>
                 </nav>
             </div>
@@ -131,13 +124,9 @@
             <div class="col-md-3">
                 <div class="card bg-light mb-3">
                     <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i>Categories</div>
-                    <ul class="list-group category_block">
-                        <li class="list-group-item"><a href="category.html">Canned Goods</a></li>
-                        <li class="list-group-item"><a href="category.html">Dairy</a></li>
-                        <li class="list-group-item"><a href="category.html">Meat</a></li>
-                        <li class="list-group-item"><a href="category.html">Produce</a></li>
-                        <li class="list-group-item"><a href="category.html">Baking goods</a></li>
-                    </ul>
+                    <div class="list-group category_block">
+                        <asp:Literal runat="server" ID="CatLiteral" />
+                    </div>
                 </div>
                 <!--  Products-->
                 <div class="card bg-light mb-3">
@@ -162,50 +151,41 @@
     </div>
 
     <!-- Footer -->
-    <footer class="text-light" id="contact">
+    <footer class="footer text-light" id="contact">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-lg-4 col-xl-3">
-                    <h5>About</h5>
-                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
-                    <p class="mb-0">
-                        We offer the  best groceries and best prices as soon as you need it.
-                    </p>
-                </div>
 
-
-
-                <div class="col-md-4 col-lg-2 col-xl-2 mx-auto">
-                    <h5>Others links</h5>
-                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
-                    <ul class="list-unstyled">
-                        <li><a href="#"><i class="fa fa-twitter fa-2x"></i> Twitter</a></li>
-                        <li><a href="#"><i class="fa fa-facebook fa-2x"></i> Facebook</a></li>
-                        <li><a href="#"><i class="fa fa-instagram fa-2x"></i> Instagram</a></li>
-                        <li><a href="#"><i class="fa fa-linkedin fa-2x"></i> LinkedIn</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-4 col-lg-3 col-xl-3">
-                    <h5>Contact</h5>
-                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
-                    <ul class="list-unstyled">
+                <div class="col-xs-6 col-md-6 text-center">
+                    <h4><strong>Contact Us</strong></h4>
+                    <ul class='list-unstyled'>
                         <li><i class="fa fa-home mr-2"></i>Grocery  shop</li>
                         <li><i class="fa fa-envelope mr-2"></i>email@example.com</li>
                         <li><i class="fa fa-phone mr-2"></i>+234556546</li>
                         <li><i class="fa fa-print mr-2"></i>+167585453</li>
                     </ul>
                 </div>
-                <div class="col-12 copyright mt-3">
-                    <p class="float-left">
-                        <i class="fa fa-caret-square-o-up" style="font-size: 60px;"></i>
+                <div class="visible-sm visible-xs clearfix"></div>
+                <div class="col-xs-6 col-md-6 text-center">
+                    <h4><strong>We're Social</strong></h4>
+                    <ul class='list-unstyled'>
+                        <li><a href="#"><i class="fa fa-twitter fa-2x"></i>Twitter</a></li>
+                        <li><a href="#"><i class="fa fa-facebook fa-2x"></i>Facebook</a></li>
+                        <li><a href="#"><i class="fa fa-instagram fa-2x"></i>Instagram</a></li>
+                        <li><a href="#"><i class="fa fa-linkedin fa-2x"></i>LinkedIn</a></li>
+                    </ul>
+                </div>
 
-                    </p>
-                    <p class="text-right text-muted">created  <i class="fa fa-heart"></i>by Ycc</p>
+            </div>
+            <!-- End Row -->
+
+            <div class="row">
+                <div class="col-sm-12 col-md-12 text-center">
+                    <span> &copy; 2018 : YCC</span>
                 </div>
             </div>
+            <!-- End row -->
         </div>
+        <!--- End Container -->
     </footer>
 </body>
-
 </html>

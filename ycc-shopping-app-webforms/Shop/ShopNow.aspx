@@ -1,58 +1,61 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ShopNow.aspx.cs" Inherits="ycc_shopping_app_webforms.Shop.ShopNow" MasterPageFile="~/Shop/Main.Master" %>
-
+<asp:Content runat="server" ContentPlaceHolderID="BreadComb">
+    <asp:Literal runat="server" ID="BreadLiteral" />
+</asp:Content>
 <asp:Content runat="server" ContentPlaceHolderID="body">
     <div class="btn-group">
-        <a class="btn btn-success btn-lg" href="shopnow.aspx">Summary</a>
-        <a class="btn btn-success btn-lg" href="Signin.aspx">Sign in</a>
-        <a class="btn btn-success btn-lg" href="Address.aspx">Current address</a>
-        <a class="btn btn-success btn-lg" href="Payment.aspx">Payments</a>
+        <a class="btn btn-success btn-lg active" href="#">Summary</a>
+        <a class="btn btn-success btn-lg" href="#">Sign in</a>
+        <a class="btn btn-success btn-lg" href="#">Current address</a>
+        <a class="btn btn-success btn-lg" href="#">Payments</a>
     </div>
     <hr />
     <!-- product button-->
     <div class="card">
         <div class="card-body">
-            <table id="cart" class="table table-hover table-condensed">
+            <table id="cart" class="table table-hover">
                 <thead>
                     <tr>
-                        <th style="width: 50%">Product</th>
-                        <th style="width: 10%">Price</th>
-                        <th style="width: 8%">Quantity</th>
-                        <th style="width: 22%" class="text-center">Subtotal</th>
-                        <th style="width: 10%"></th>
+                        <th>Product</th>
+                        <th class="text-center">Quantity</th>
+                        <th>Price</th>
+                        <th class="text-center">Total</th>
+                        <th>&nbsp;</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <asp:Literal runat="server" ID="CartITemLiteral" />
                     <tr>
-                        <td data-th="Product">
-                            <div class="row">
-                                <div class="col-sm-2 hidden-xs">
-                                    <img src="" alt="..." class="img-responsive" />
-                                </div>
-                                <div class="col-sm-10">
-                                    <h4 class="nomargin"></h4>
-                                    <!--product-->
-
-                                </div>
-                            </div>
+                        <td>&nbsp; </td>
+                        <td>&nbsp; </td>
+                        <td>&nbsp; </td>
+                        <td>Subtotal</td>
+                        <td class="text-right">
+                            <strong><asp:Literal runat="server" ID="subTotal" /></strong>
                         </td>
-                        <td data-th="Price"></td>
-                        <!--price-->
-                        <td data-th="Quantity">
-                            <input type="number" class="form-control text-center" value=""><!--amount of items picked-->
+                    </tr>
+                    <tr>
+                        <td>&nbsp; </td>
+                        <td>&nbsp; </td>
+                        <td>&nbsp; </td>
+                        <td>Estimated TP</td>
+                        <td class="text-right">
+                            <strong>
+                                <asp:Literal runat="server" ID="transportLiteral" /></strong>
                         </td>
-                        <td data-th="Subtotal" class="text-center"></td>
-                        <!--price-->
-                        <td class="actions" data-th="">
-                            <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
-                            <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
+                    </tr>
+                    <tr>
+                        <td>&nbsp; </td>
+                        <td>&nbsp; </td>
+                        <td>&nbsp; </td>
+                        <td>Total</td>
+                        <td class="text-right">
+                            <h5><strong>
+                                <asp:Literal runat="server" ID="Total" /></strong></h5>
                         </td>
                     </tr>
                 </tbody>
                 <tfoot>
-                    <tr class="visible-xs">
-                        <td class="text-center"><strong></strong></td>
-                        <!--total amount-->
-                    </tr>
                     <tr>
                         <td><a href="Default.aspx" class="btn btn-warning"><i class="fa fa-angle-left"></i>Continue Shopping</a></td>
                         <td colspan="2" class="hidden-xs"></td>
