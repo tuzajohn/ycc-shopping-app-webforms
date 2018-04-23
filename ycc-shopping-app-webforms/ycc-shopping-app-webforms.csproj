@@ -89,10 +89,12 @@
     <Content Include="images\images6.jpg" />
     <Content Include="images\images7.jpg" />
     <Content Include="images\index.jpg" />
+    <Content Include="images\noimage.jpg" />
     <Content Include="Shop\Address.aspx" />
     <Content Include="Shop\Default.aspx" />
     <Content Include="Shop\Main.Master" />
     <Content Include="Shop\Payment.aspx" />
+    <Content Include="Shop\Product.aspx" />
     <Content Include="Shop\ShopNow.aspx" />
     <Content Include="Shop\Signin.aspx" />
     <Content Include="Styles\fonts\glyphicons-halflings-regular.eot" />
@@ -199,6 +201,13 @@
     </Compile>
     <Compile Include="Shop\Payment.aspx.designer.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop\Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
     </Compile>
     <Compile Include="Shop\ShopNow.aspx.cs">
       <DependentUpon>ShopNow.aspx</DependentUpon>

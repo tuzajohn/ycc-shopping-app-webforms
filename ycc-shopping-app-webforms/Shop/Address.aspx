@@ -1,11 +1,13 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Address.aspx.cs" Inherits="ycc_shopping_app_webforms.Shop.Address" MasterPageFile="~/Shop/Main.Master"%>
-
+<asp:Content runat="server" ContentPlaceHolderID="BreadComb">
+    <asp:Literal runat="server" ID="BreadLiteral" />
+</asp:Content>
 <asp:Content runat="server" ContentPlaceHolderID="body">
     <div class="btn-group">
-        <a class="btn btn-success btn-lg" href="shopnow.aspx">Summary</a>
-        <a class="btn btn-success btn-lg" href="Signin.aspx">Sign in</a>
-        <a class="btn btn-success btn-lg" href="Address.aspx">Current address</a>
-        <a class="btn btn-success btn-lg" href="Payment.aspx">Payments</a>
+        <a class="btn btn-success btn-lg" href="#">Summary</a>
+        <a class="btn btn-success btn-lg" href="#">Sign in</a>
+        <a class="btn btn-success btn-lg active" href="#">Current address</a>
+        <a class="btn btn-success btn-lg" href="#">Payments</a>
     </div>
     <hr />
     <!--current address-->

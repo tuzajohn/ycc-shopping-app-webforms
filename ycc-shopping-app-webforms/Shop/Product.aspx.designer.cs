@@ -10,7 +10,7 @@
 namespace ycc_shopping_app_webforms.Shop {
     
     
-    public partial class ShopNow {
+    public partial class Product {
         
         /// <summary>
         /// BreadLiteral control.
@@ -22,39 +22,57 @@ namespace ycc_shopping_app_webforms.Shop {
         protected global::System.Web.UI.WebControls.Literal BreadLiteral;
         
         /// <summary>
-        /// CartITemLiteral control.
+        /// MessageLiteral control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal CartITemLiteral;
+        protected global::System.Web.UI.WebControls.Literal MessageLiteral;
         
         /// <summary>
-        /// subTotal control.
+        /// ModelITemLiteral control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal subTotal;
+        protected global::System.Web.UI.WebControls.Literal ModelITemLiteral;
         
         /// <summary>
-        /// transportLiteral control.
+        /// costText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal transportLiteral;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl costText;
         
         /// <summary>
-        /// Total control.
+        /// qtySelect control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Total;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect qtySelect;
+        
+        /// <summary>
+        /// ItemBtnCart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ItemBtnCart;
+        
+        /// <summary>
+        /// desc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl desc;
     }
 }

@@ -54,7 +54,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cart.cs" />
     <Compile Include="CustomFunction.cs" />
     <Compile Include="Db_Models.cs" />
     <Compile Include="Payments.cs" />
