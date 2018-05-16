@@ -32,7 +32,7 @@ namespace ycc_shopping_app_webforms.Shop
         {
             int pos = 0;
             string d = string.Empty;
-            var itemList = new Item().getAllRecords(Item_support.Column.Name, Item_support.Order.ASCENDING);
+            var itemList = new Item_view().getAllRecords();
             foreach (var item in itemList)
             {
                 if (pos % 3 == 0) { d += "<div class='row'>"; }                

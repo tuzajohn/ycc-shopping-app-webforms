@@ -56,7 +56,7 @@
   <ItemGroup>
     <Compile Include="CustomFunction.cs" />
     <Compile Include="Db_Models.cs" />
-    <Compile Include="Payments.cs" />
+    <Compile Include="Processing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,19 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ycc_shopping_app_webforms.Shop {
+namespace ycc_shopping_app_webforms.Account {
     
     
-    public partial class Address {
-        
-        /// <summary>
-        /// BreadLiteral control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal BreadLiteral;
+    public partial class Signin {
         
         /// <summary>
         /// MessageLiteral control.
@@ -37,7 +28,7 @@ namespace ycc_shopping_app_webforms.Shop {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl fname;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText fname;
         
         /// <summary>
         /// lname control.
@@ -46,7 +37,7 @@ namespace ycc_shopping_app_webforms.Shop {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lname;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText lname;
         
         /// <summary>
         /// contact control.
@@ -85,21 +76,39 @@ namespace ycc_shopping_app_webforms.Shop {
         protected global::System.Web.UI.HtmlControls.HtmlInputText billingAddress;
         
         /// <summary>
-        /// confirmBtn control.
+        /// username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton confirmBtn;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText username;
         
         /// <summary>
-        /// proceedBtn control.
+        /// password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton proceedBtn;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword password;
+        
+        /// <summary>
+        /// password_confirm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword password_confirm;
+        
+        /// <summary>
+        /// loginBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton loginBtn;
     }
 }

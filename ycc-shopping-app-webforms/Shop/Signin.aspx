@@ -11,6 +11,7 @@
     </div>
     <hr />
     <div class="card">
+        <asp:Literal runat="server" ID="MesageLiteral" />
         <div class="card-body">
             <!--sign in-->
             <div class="omb_login">
@@ -28,7 +29,7 @@
                             </div>
                             <button runat="server" id="loginBtn" class="btn btn-primary">Login, and proceed.</button>
                         </form>
-                        <a href="#" class="alert-link">don't have an account yet?</a>
+                        <a href="../Account/Signin.aspx" class="alert-link">don't have an account yet?</a>
                     </div>
                 </div>
 

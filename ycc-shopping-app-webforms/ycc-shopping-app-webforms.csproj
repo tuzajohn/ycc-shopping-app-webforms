@@ -70,8 +70,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Account\Account.Master" />
     <None Include="packages.config" />
+    <Content Include="Account\Logout.aspx" />
+    <Content Include="Account\Signin.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="images\1.jpg" />
     <Content Include="images\2.jpg" />
     <Content Include="images\3.jpeg" />
@@ -109,7 +111,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Account\Login.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Styles\Content\bootstrap.css" />
     <Content Include="Styles\Content\bootstrap.min.css" />
@@ -152,19 +153,26 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account\Account.Master.cs">
-      <DependentUpon>Account.Master</DependentUpon>
+    <Compile Include="Account\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\Account.Master.designer.cs">
-      <DependentUpon>Account.Master</DependentUpon>
+    <Compile Include="Account\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="Account\Signin.aspx.cs">
+      <DependentUpon>Signin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="Account\Signin.aspx.designer.cs">
+      <DependentUpon>Signin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

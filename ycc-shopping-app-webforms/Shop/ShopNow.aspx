@@ -11,6 +11,7 @@
     </div>
     <hr />
     <!-- product button-->
+    <asp:Literal runat="server" ID="MessageLiteral" />
     <div class="card">
         <div class="card-body">
             <table id="cart" class="table table-hover">
@@ -61,7 +62,7 @@
                         <td colspan="2" class="hidden-xs"></td>
                         <td class="hidden-xs text-center"><strong></strong></td>
                         <!--total amount-->
-                        <td><a href="Signin.aspx" class="btn btn-success btn-block">Next <i class="fa fa-angle-right"></i></a></td>
+                        <td><a runat="server" id="nextBtn" href="#" class="btn btn-success btn-block">Next <i class="fa fa-angle-right"></i></a></td>
                     </tr>
                 </tfoot>
             </table>

@@ -7,11 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace ycc_shopping_app_webforms.Account
 {
-    public partial class Account : System.Web.UI.MasterPage
+    public partial class Logout : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session.Clear();
+            Response.Redirect("~/");
         }
     }
 }

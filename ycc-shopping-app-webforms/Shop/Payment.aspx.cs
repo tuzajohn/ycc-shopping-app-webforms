@@ -11,11 +11,22 @@ namespace ycc_shopping_app_webforms.Shop
     {
         HtmlElements elements = new HtmlElements();
         Dictionary<string, string> bcomb = new Dictionary<string, string>();
+        SessionVerification SV;
         protected void Page_Load(object sender, EventArgs e)
         {
+            SV = new SessionVerification();
             bcomb.Add("Default.aspx", "Home");
             bcomb.Add("Payment.aspx", "Payment");
             BreadLiteral.Text = elements.BreadComd(bcomb);
+            Check();
         }
+        void Check()
+        {
+            if (string.IsNullOrEmpty(SV.Id))
+            {
+                Response.Redirect("~/");
+            }
+        }
+
     }
 }

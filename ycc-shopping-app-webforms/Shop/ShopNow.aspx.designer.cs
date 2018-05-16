@@ -22,6 +22,15 @@ namespace ycc_shopping_app_webforms.Shop {
         protected global::System.Web.UI.WebControls.Literal BreadLiteral;
         
         /// <summary>
+        /// MessageLiteral control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal MessageLiteral;
+        
+        /// <summary>
         /// CartITemLiteral control.
         /// </summary>
         /// <remarks>
@@ -56,5 +65,14 @@ namespace ycc_shopping_app_webforms.Shop {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal Total;
+        
+        /// <summary>
+        /// nextBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor nextBtn;
     }
 }

@@ -22,6 +22,15 @@ namespace ycc_shopping_app_webforms.Shop {
         protected global::System.Web.UI.WebControls.Literal BreadLiteral;
         
         /// <summary>
+        /// MesageLiteral control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal MesageLiteral;
+        
+        /// <summary>
         /// username control.
         /// </summary>
         /// <remarks>

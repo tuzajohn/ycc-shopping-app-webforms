@@ -11,15 +11,30 @@ namespace ycc_shopping_app_webforms
     public class SessionVerification:System.Web.UI.Page
     {
         
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string Fname { get; set; }
         public string Lname { get; set; }
+        public string BillingAddress { get; set; }
+        public string ShippingAddress { get; set; }
+        public string Email { get; set; }
+        public string Contact { get; set; }
+        public string Username { get; set; }
         public string Key = "_H%^.#1g";
         RegExpression reg = new RegExpression();
         Encryption enc = new Encryption();
         public SessionVerification()
         {
-
+            try
+            {
+                Id = Session["userId"].ToString();
+                Fname = Session["fname"].ToString();
+                Lname = Session["lname"].ToString();
+                Contact = Session["contact"].ToString();
+                ShippingAddress = Session["shipping_address"].ToString();
+                BillingAddress = Session["billing_address"].ToString();
+                Email = Session["email"].ToString();
+            }
+            catch (Exception) { }
         }
         public string GetImage(string itemUrl)
         {

@@ -49,10 +49,10 @@
                         <i class="fa fa-shopping-cart"></i>Cart
                                 <span class="badge badge-light"><asp:Literal runat="server" ID="CartItemCounterLiteral" /></span>
                     </a>
-                    <a class="btn btn-success btn-sm ml-3" href="#">
+                    <a runat="server" id="signup" class="btn btn-success btn-sm ml-3" href="~/Account/Signin.aspx">
                         <i class="fa fa-user"></i>Sign Up
                     </a>
-                    <a class="btn btn-success btn-sm ml-3" href="#">
+                    <a runat="server" id="logout" class="btn btn-success btn-sm ml-3" href="~/Account/Logout.aspx">
                         <i class="fa fa-user"></i>Logout
                     </a>
                 </form>

@@ -43,19 +43,34 @@
                     <div class="card bg-light mb-3">
                         <div class="card-body">
                             <p class="price" runat="server" id="costText"></p>
-                            <div>
+                            <form runat="server">
                                 <div class="form-group">
-                                    <label>Quantity :</label>
-                                    <select runat="server" id="qtySelect" class="form-control mb-3">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                    </select>
-                                    <asp:Literal runat="server" ID="ItemBtnCart" />
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Availability: </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label style="" runat="server" id="avlable"></label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Quantity :</label>
+                                        </div>
+                                        <div class="col-md-8 form-group">
+                                            <input runat="server" id="qty" type="number" min="0" max="100" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <a href='#' runat="server" id="addBtn" class='btn btn-success btn-block text-uppercase'>
+                                                <i class='fa fa-shopping-cart'></i>Add To Cart
+                                            </a>
+                                        </div>
+                                    </div>
                             </div>
 
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>

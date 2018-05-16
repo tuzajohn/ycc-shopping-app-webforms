@@ -49,22 +49,31 @@ namespace ycc_shopping_app_webforms.Shop {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl costText;
         
         /// <summary>
-        /// qtySelect control.
+        /// avlable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect qtySelect;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl avlable;
         
         /// <summary>
-        /// ItemBtnCart control.
+        /// qty control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ItemBtnCart;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl qty;
+        
+        /// <summary>
+        /// addBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor addBtn;
         
         /// <summary>
         /// desc control.

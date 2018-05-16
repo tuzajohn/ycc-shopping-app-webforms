@@ -28,6 +28,7 @@ namespace ycc_shopping_app_webforms.Shop
                 DeleteItemFromCart(id, qty);
             }
             DisplayCartContent();
+            NextNav();
         }
         void DisplayCartContent()
         {
@@ -49,6 +50,7 @@ namespace ycc_shopping_app_webforms.Shop
                 transportLiteral.Text = tp.ToString();
                 Total.Text = (tp + tempTotal).ToString();
             }
+            Session["total"] = Total;
             CartITemLiteral.Text = d;
         }
         void DeleteItemFromCart(string id, string qty)
@@ -57,7 +59,12 @@ namespace ycc_shopping_app_webforms.Shop
             
             var c = Cartlist.FindIndex(r => r.ItemID == enc.DecryptString(id, SV.Key));
             Cartlist.RemoveAt(c);
-            Response.Redirect("~/Shop/Shopnow.aspx"); ;
+            Response.Redirect("~/Shop/Shopnow.aspx");
+        }
+        void NextNav()
+        {
+            if (String.IsNullOrEmpty(SV.Id)) { Response.Redirect("~/Shop/Signin.aspx"); }
+            else { Response.Redirect("~/Shop/Address.aspx"); }
         }
     }
 }

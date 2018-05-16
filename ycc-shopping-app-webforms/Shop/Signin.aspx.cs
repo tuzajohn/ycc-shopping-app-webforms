@@ -21,22 +21,33 @@ namespace ycc_shopping_app_webforms.Shop
             bcomb.Add("Default.aspx", "Home");
             bcomb.Add("Signin.aspx", "Sign In");
             BreadLiteral.Text = elements.BreadComd(bcomb);
+            if(Session["message"] != null) { MesageLiteral.Text = Session["message"].ToString(); Session["message"] = null; }
+            LoginEvent();
         }
         private void LoginEvent()
         {
             loginBtn.ServerClick += delegate
             {
-                var logins = new Login_table().Load_record_with(Login_table_support.Column.Username, Login_table_support.LogicalOperator.EQUAL_TO, username.Value);
+                var logins = new ShoppingLibrary.Login().Load_record_with(Login_support.Column.Username, Login_support.LogicalOperator.EQUAL_TO, username.Value);
                 if (!string.IsNullOrEmpty(logins.Id))
                 {
-                    if (enc.GetMD5(password.Value) == logins.Password)
+                    if (enc.GetMD5(enc.StrongEncrypt(password.Value)) == logins.Password)
                     {
                         var uDetails = new Buyer(logins.Id);
-                        //logins, then go to address
+                        Session["userId"] = logins.Id;
+                        Session["fname"] = uDetails.Fname;
+                        Session["lname"] = uDetails.Lname;
+                        Session["contact"] = uDetails.PhoneNumber;
+                        Session["shipping_address"] = uDetails.ShippingAddress;
+                        Session["billing_address"] = uDetails.BillingAddress;
+                        Session["email"] = uDetails.EmailAddress;
+
+                        Response.Redirect("~/Shop/Address.aspx");
                     }
-                    else { }
+                    else { Session["message"] = elements.GetBasicMessage("Wrong username or password"); }
                 }
-                else { }
+                else { Session["message"] = elements.GetBasicMessage("Wrong username or password"); }
+                Response.Redirect("~/Shop/Signin.aspx");
             };
         }
     }
